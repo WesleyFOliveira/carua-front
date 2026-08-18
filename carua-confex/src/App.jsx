@@ -1,5 +1,19 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import "./index.css";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import NotFound from "./pages/NotFound.jsx";
+import Index from "./pages/Index.jsx";
+import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 
-createRoot(document.getElementById("root")).render();
+const queryClient = new QueryClient();
+
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
+  </QueryClientProvider>
+);
+
+export default App;

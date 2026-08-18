@@ -4,11 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Caruá Confex — Design System
-  Paleta inspirada no sertão e na tradição têxtil nordestina.
-  Todas as cores em HSL. Nunca usar cores cruas em componentes.
-*/
-
 @layer base {
   :root {
     /* Base — 60% */
