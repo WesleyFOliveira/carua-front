@@ -1,8 +1,8 @@
-# Caruá Tecido
+# Caruá Confex
 
 > **Gestão produtiva para o setor têxtil, conectando produção, profissionais e negócios.**
 
-O **Caruá Tecido** é uma plataforma digital voltada para facções, pequenas confecções e profissionais do setor têxtil. A solução centraliza a gestão da produção, o controle de materiais, o acompanhamento financeiro e a conexão com profissionais especializados em um único ambiente.
+O **Caruá Confex** é uma plataforma digital voltada para facções, pequenas confecções e profissionais do setor têxtil. A solução centraliza a gestão da produção, o controle de materiais, o acompanhamento financeiro e a conexão com profissionais especializados em um único ambiente.
 
 A plataforma foi pensada para transformar processos tradicionalmente realizados de forma manual em uma operação mais **organizada, rastreável e eficiente**, sem perder a proximidade e a identidade cultural da região.
 
@@ -10,7 +10,7 @@ A plataforma foi pensada para transformar processos tradicionalmente realizados 
 
 ## Visão geral
 
-O Caruá Tecido é estruturado em três pilares:
+O Caruá Confex é estruturado em três pilares:
 
 * **Gestão da produção** — acompanhamento de pedidos, lotes e etapas produtivas.
 * **Gestão operacional** — controle de materiais, profissionais, pagamentos e custos.
@@ -80,7 +80,7 @@ Permite organizar os profissionais envolvidos na operação e acompanhar sua par
 
 ## Marketplace
 
-O Caruá Tecido também conecta negócios e profissionais do setor têxtil por meio de um marketplace integrado à plataforma.
+O Caruá Confex também conecta negócios e profissionais do setor têxtil por meio de um marketplace integrado à plataforma.
 
 Cada profissional pode possuir um **perfil público**, funcionando como um portfólio digital.
 
@@ -103,7 +103,7 @@ Os profissionais são apresentados em uma área de exploração, facilitando a d
 
 ## Landing Page
 
-A presença institucional do Caruá Tecido apresenta a plataforma de forma clara e objetiva, destacando seus principais diferenciais.
+A presença institucional do Caruá Confex apresenta a plataforma de forma clara e objetiva, destacando seus principais diferenciais.
 
 ### Estrutura
 
@@ -120,7 +120,7 @@ A presença institucional do Caruá Tecido apresenta a plataforma de forma clara
 
 ## Experiência e interface
 
-A interface do Caruá Tecido prioriza uma experiência:
+A interface do Caruá Confex prioriza uma experiência:
 
 * Simples;
 * Intuitiva;
@@ -172,34 +172,6 @@ Esses elementos devem complementar a interface sem comprometer sua legibilidade 
 
 ---
 
-## Arquitetura da plataforma
-
-A experiência do Caruá Tecido é organizada em três ambientes principais:
-
-```text
-Caruá Tecido
-│
-├── Institucional
-│   ├── Landing Page
-│   ├── Sobre a plataforma
-│   └── Benefícios
-│
-├── Gestão
-│   ├── Dashboard
-│   ├── Pedidos e lotes
-│   ├── Produção
-│   ├── Materiais
-│   ├── Profissionais
-│   └── Financeiro
-│
-└── Marketplace
-    ├── Explorar profissionais
-    ├── Perfil profissional
-    └── Portfólio
-```
-
----
-
 ## Fluxo de produção
 
 O sistema organiza a produção de forma visual e sequencial:
@@ -232,7 +204,7 @@ Cada etapa pode possuir um responsável, status e informações relacionadas à 
 
 ## Princípios do produto
 
-O desenvolvimento do Caruá Tecido segue alguns princípios fundamentais:
+O desenvolvimento do Caruá Confex segue alguns princípios fundamentais:
 
 ### Simplicidade
 
@@ -262,7 +234,7 @@ A plataforma utiliza elementos visuais que valorizam a cultura e a tradição t�
 
 ## Escopo da plataforma
 
-O Caruá Tecido concentra sua experiência nos principais processos da operação:
+O Caruá Confex concentra sua experiência nos principais processos da operação:
 
 | Área              | Recursos                                 |
 | ----------------- | ---------------------------------------- |
@@ -278,8 +250,8 @@ O Caruá Tecido concentra sua experiência nos principais processos da operaçã
 
 ## Direção do produto
 
-O Caruá Tecido busca aproximar **gestão, produção e pessoas** em uma experiência digital única.
+O Caruá Confex busca aproximar **gestão, produção e pessoas** em uma experiência digital única.
 
 Mais do que digitalizar processos, a plataforma pretende criar uma infraestrutura que ajude negócios têxteis a trabalhar com mais organização, visibilidade e controle, enquanto amplia as oportunidades para profissionais especializados.
 
-> **Caruá Tecido — conectando quem produz, quem transforma e quem faz acontecer.**
+> **Caruá Confex - conectando quem produz, quem transforma e quem faz acontecer.**
