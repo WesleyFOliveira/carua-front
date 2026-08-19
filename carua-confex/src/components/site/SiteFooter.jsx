@@ -27,12 +27,12 @@ export const SiteFooter = () => (
       <div>
         <h4 className="mb-3 font-display font-semibold">Contato</h4>
         <p className="text-sm text-background/70">contato@caruaconfex.com.br</p>
-        <p className="text-sm text-background/70">Caruaru — Pernambuco</p>
+        <p className="text-sm text-background/70">Caruaru - Pernambuco</p>
       </div>
     </div>
     <div className="border-t border-background/10">
       <div className="container py-5 text-center text-xs text-background/60">
-        © 2026 Caruá Confex — Feito com tradição no agreste.
+        © 2026 Caruá Confex - Desenvolvido para o agreste.
       </div>
     </div>
   </footer>
