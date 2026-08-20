@@ -1,16 +1,10 @@
-import {
-  UserCircle2,
-  Mail,
-  Phone,
-  MapPin,
-} from "lucide-react";
+import { UserCircle2, Mail, Phone, MapPin } from "lucide-react";
 
 import FormField from "./FormField";
 
 const PersonalDataStep = ({ data, onChange }) => {
   return (
     <div className="space-y-5">
-
       <div>
         <h2 className="font-display text-[26px] font-bold tracking-tight">
           Dados pessoais
@@ -39,7 +33,6 @@ const PersonalDataStep = ({ data, onChange }) => {
       />
 
       <div className="grid grid-cols-2 gap-3">
-
         <FormField
           label="WhatsApp"
           icon={Phone}
@@ -55,9 +48,7 @@ const PersonalDataStep = ({ data, onChange }) => {
           onChange={(value) => onChange("cidade", value)}
           placeholder="Caruaru, PE"
         />
-
       </div>
-
     </div>
   );
 };

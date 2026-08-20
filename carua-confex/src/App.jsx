@@ -1,7 +1,10 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NotFound from "./pages/NotFound.jsx";
 import Index from "./pages/Index.jsx";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
+import Cadastro from "./pages/Cadastro.jsx";
+
+import Toaster from "./components/ui/Toaster.jsx";
 
 const queryClient = new QueryClient();
 
@@ -10,8 +13,11 @@ const App = () => (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Index />} />
+        <Route path="/cadastro/*" element={<Cadastro/>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+
+      <Toaster />
     </BrowserRouter>
   </QueryClientProvider>
 );

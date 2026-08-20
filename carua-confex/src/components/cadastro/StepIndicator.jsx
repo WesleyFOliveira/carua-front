@@ -27,17 +27,12 @@ const StepIndicator = ({ currentStep, tipo }) => {
 
   return (
     <div className="space-y-3 pt-4">
-
       {steps.map((step) => {
         const completed = currentStep > step.number;
         const active = currentStep === step.number;
 
         return (
-          <div
-            key={step.number}
-            className="flex items-center gap-3"
-          >
-
+          <div key={step.number} className="flex items-center gap-3">
             <div
               className={`flex h-7 w-7 items-center justify-center rounded-full text-xs font-bold transition-all ${
                 completed
@@ -47,11 +42,7 @@ const StepIndicator = ({ currentStep, tipo }) => {
                     : "bg-white/10 text-white/50"
               }`}
             >
-              {completed ? (
-                <Check className="h-3.5 w-3.5" />
-              ) : (
-                step.number
-              )}
+              {completed ? <Check className="h-3.5 w-3.5" /> : step.number}
             </div>
 
             <span
@@ -65,11 +56,9 @@ const StepIndicator = ({ currentStep, tipo }) => {
             >
               {step.label}
             </span>
-
           </div>
         );
       })}
-
     </div>
   );
 };

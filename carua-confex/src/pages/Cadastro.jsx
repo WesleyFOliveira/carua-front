@@ -1,24 +1,18 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import {
-  ArrowLeft,
-  ArrowRight,
-  Check,
-  Eye,
-  EyeOff,
-} from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, Eye, EyeOff } from "lucide-react";
 
-import { useToast } from "@/hooks/use-toast";
+import { useToast } from "../hooks/use-toast";
 
-import AccountTypeStep from "@/components/cadastro/AccountTypeStep";
-import PersonalDataStep from "@/components/cadastro/PersonalDataStep";
-import ProfileStep from "@/components/cadastro/ProfileStep";
-import PasswordStep from "@/components/cadastro/PasswordStep";
-import StepIndicator from "@/components/cadastro/StepIndicator";
+import AccountTypeStep from "../components/cadastro/AccontTypeStep";
+import PersonalDataStep from "../components/cadastro/PersonalDataStep";
+import ProfileStep from "../components/cadastro/ProfileStep";
+import PasswordStep from "../components/cadastro/PasswordStep";
+import StepIndicator from "../components/cadastro/StepIndicator";
 
-import { validateCadastroStep } from "@/utils/cadastroValidation";
-import { buildCadastroPayload } from "@/utils/cadastroPayload";
-import { registerUser } from "@/services/authService";
+import { validateCadastroStep } from "../utils/cadastroValidation";
+import { buildCadastroPayload } from "../utils/cadastroPayload";
+import { registerUser } from "../services/authService";
 
 const TOTAL_STEPS = 4;
 
@@ -134,6 +128,7 @@ const Cadastro = () => {
       toast({
         title: "Conta criada!",
         description: "Seu cadastro foi realizado com sucesso.",
+        variant: "success",
       });
 
       if (formData.tipo === "confeccao") {
@@ -156,20 +151,12 @@ const Cadastro = () => {
 
   const renderStep = () => {
     if (step === 1) {
-      return (
-        <AccountTypeStep
-          tipo={formData.tipo}
-          onChange={updateTipo}
-        />
-      );
+      return <AccountTypeStep tipo={formData.tipo} onChange={updateTipo} />;
     }
 
     if (step === 2) {
       return (
-        <PersonalDataStep
-          data={formData.usuario}
-          onChange={updateUsuario}
-        />
+        <PersonalDataStep data={formData.usuario} onChange={updateUsuario} />
       );
     }
 
@@ -195,12 +182,10 @@ const Cadastro = () => {
 
   return (
     <div className="flex min-h-screen">
-
       {/* HERO */}
       <div className="relative hidden w-[45%] overflow-hidden lg:block">
-
         <img
-          src="/images/cadastro-hero.jpg"
+          src="/assets/img-hero.webp"
           alt="Produção têxtil"
           className="absolute inset-0 h-full w-full object-cover"
         />
@@ -210,23 +195,19 @@ const Cadastro = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-[hsl(20,43%,6%)] via-transparent to-transparent" />
 
         <div className="relative z-10 flex h-full flex-col justify-between p-10">
-
           <Link to="/" className="flex items-center gap-2.5">
             <span className="font-display text-xl font-bold text-white">
-              Caruá Tecido
+              Caruá Confex
             </span>
           </Link>
 
           <div className="max-w-md space-y-6">
-
             <h1 className="font-display text-4xl font-extrabold leading-[1.1] text-white">
               {step === 1 && (
                 <>
                   Comece sua jornada
                   <br />
-                  <span className="text-orange-300">
-                    em poucos passos.
-                  </span>
+                  <span className="text-orange-300">em poucos passos.</span>
                 </>
               )}
 
@@ -234,9 +215,7 @@ const Cadastro = () => {
                 <>
                   Quem é você?
                   <br />
-                  <span className="text-orange-300">
-                    Conte-nos.
-                  </span>
+                  <span className="text-orange-300">Conte-nos.</span>
                 </>
               )}
 
@@ -246,9 +225,7 @@ const Cadastro = () => {
                     <>
                       Seu trabalho,
                       <br />
-                      <span className="text-orange-300">
-                        seu portfólio.
-                      </span>
+                      <span className="text-orange-300">seu portfólio.</span>
                     </>
                   ) : (
                     <>
@@ -268,9 +245,7 @@ const Cadastro = () => {
                 <>
                   Quase lá!
                   <br />
-                  <span className="text-orange-300">
-                    Proteja sua conta.
-                  </span>
+                  <span className="text-orange-300">Proteja sua conta.</span>
                 </>
               )}
             </h1>
@@ -289,29 +264,19 @@ const Cadastro = () => {
                 "Crie uma senha segura para proteger seu acesso à plataforma."}
             </p>
 
-            <StepIndicator
-              currentStep={step}
-              tipo={formData.tipo}
-            />
-
+            <StepIndicator currentStep={step} tipo={formData.tipo} />
           </div>
 
           <p className="text-xs text-white/60">
             Feito para o polo têxtil do Agreste
           </p>
-
         </div>
       </div>
 
       {/* CONTEÚDO */}
       <div className="flex flex-1 flex-col bg-background">
-
         <div className="flex items-center justify-between p-6 lg:justify-end">
-
-          <Link
-            to="/"
-            className="flex items-center gap-2 lg:hidden"
-          >
+          <Link to="/" className="flex items-center gap-2 lg:hidden">
             <span className="font-display text-base font-bold">
               Caruá Tecido
             </span>
@@ -326,46 +291,35 @@ const Cadastro = () => {
               Entrar
             </Link>
           </p>
-
         </div>
 
         <div className="flex flex-1 items-start justify-center px-6 pb-12 sm:items-center">
-
           <div className="w-full max-w-[440px] space-y-6">
-
             {/* PROGRESSO MOBILE */}
             <div className="lg:hidden">
-
               <div className="mb-2 flex justify-between text-xs text-muted-foreground">
                 <span>
                   Passo {step} de {TOTAL_STEPS}
                 </span>
 
-                <span>
-                  {Math.round((step / TOTAL_STEPS) * 100)}%
-                </span>
+                <span>{Math.round((step / TOTAL_STEPS) * 100)}%</span>
               </div>
 
               <div className="h-1.5 overflow-hidden rounded-full bg-surface">
-
                 <div
                   className="h-full bg-gradient-warm transition-all duration-500"
                   style={{
                     width: `${(step / TOTAL_STEPS) * 100}%`,
                   }}
                 />
-
               </div>
-
             </div>
 
             {renderStep()}
 
             {/* NAVEGAÇÃO */}
             <form onSubmit={handleSubmit}>
-
               <div className="flex gap-3 pt-2">
-
                 {step > 1 && (
                   <button
                     type="button"
@@ -384,7 +338,6 @@ const Cadastro = () => {
                     className="group flex h-12 flex-1 items-center justify-center gap-2 rounded-xl bg-foreground text-background transition hover:bg-foreground/90"
                   >
                     Continuar
-
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                   </button>
                 ) : (
@@ -406,25 +359,17 @@ const Cadastro = () => {
                     )}
                   </button>
                 )}
-
               </div>
-
             </form>
-
           </div>
-
         </div>
 
         <div className="px-6 pb-6 text-center">
-
           <p className="text-xs text-muted-foreground/50">
-            © 2026 Caruá Tecido · Do Agreste para o mundo
+            © 2026 Caruá Confex · Do Agreste para o mundo
           </p>
-
         </div>
-
       </div>
-
     </div>
   );
 };

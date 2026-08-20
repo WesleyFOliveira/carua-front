@@ -1,8 +1,4 @@
-import {
-  Building2,
-  Check,
-  UserCircle2,
-} from "lucide-react";
+import { Building2, Check, UserCircle2 } from "lucide-react";
 
 const accountTypes = [
   {
@@ -25,8 +21,7 @@ const accountTypes = [
     value: "profissional",
     icon: UserCircle2,
     label: "Sou profissional autônomo",
-    description:
-      "Quero divulgar meu trabalho e receber oportunidades.",
+    description: "Quero divulgar meu trabalho e receber oportunidades.",
     tags: ["Portfólio", "Serviços", "Pedidos"],
   },
 ];
@@ -34,7 +29,6 @@ const accountTypes = [
 const AccountTypeStep = ({ tipo, onChange }) => {
   return (
     <div className="space-y-6">
-
       <div>
         <h2 className="font-display text-[26px] font-bold tracking-tight">
           Como você vai usar?
@@ -46,7 +40,6 @@ const AccountTypeStep = ({ tipo, onChange }) => {
       </div>
 
       <div className="grid gap-3">
-
         {accountTypes.map((option) => {
           const Icon = option.icon;
           const active = tipo === option.value;
@@ -62,7 +55,6 @@ const AccountTypeStep = ({ tipo, onChange }) => {
                   : "border-border bg-surface/30 hover:border-primary/40"
               }`}
             >
-
               <div
                 className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${
                   active
@@ -74,7 +66,6 @@ const AccountTypeStep = ({ tipo, onChange }) => {
               </div>
 
               <div className="flex-1 space-y-1">
-
                 <p className="font-display text-[15px] font-bold">
                   {option.label}
                 </p>
@@ -93,27 +84,21 @@ const AccountTypeStep = ({ tipo, onChange }) => {
                     </span>
                   ))}
                 </div>
-
               </div>
 
               <div
                 className={`mt-1 flex h-5 w-5 items-center justify-center rounded-full border-2 ${
-                  active
-                    ? "border-primary bg-primary"
-                    : "border-border"
+                  active ? "border-primary bg-primary" : "border-border"
                 }`}
               >
                 {active && (
                   <Check className="h-3 w-3 text-primary-foreground" />
                 )}
               </div>
-
             </button>
           );
         })}
-
       </div>
-
     </div>
   );
 };
