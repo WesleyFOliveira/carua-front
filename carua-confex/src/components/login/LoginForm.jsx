@@ -3,7 +3,6 @@ import { Eye, EyeOff, ArrowRight } from "lucide-react";
 import { Button } from "../ui/Button";
 import { Input } from "../ui/Input";
 import { Label } from "../ui/Label";
-import { ProfileTabs } from "./ProfileTabs";
 import { GoogleButton } from "./GoogleButton";
 
 export function LoginForm({ onSuccess, onError }) {
@@ -29,7 +28,7 @@ export function LoginForm({ onSuccess, onError }) {
 
   return (
     <div className="space-y-8">
-      <ProfileTabs value={perfil} onChange={setPerfil} />
+    
 
       <form onSubmit={handleSubmit} className="space-y-5">
         {/* Email */}
