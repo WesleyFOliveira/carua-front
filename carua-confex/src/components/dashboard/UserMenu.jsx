@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-export function UserMenu({ nome, papel, perfilHref = "/confeccao/perfil", iniciais }) {
+export function UserMenu({ nome, papel, perfilHref = "/confeccao/perfil", iniciais, avatarUrl }) {
   const [open, setOpen] = useState(false);
   const ref = useRef(null);
 
@@ -17,9 +17,13 @@ export function UserMenu({ nome, papel, perfilHref = "/confeccao/perfil", inicia
     <div className="relative" ref={ref}>
       <button
         onClick={() => setOpen((v) => !v)}
-        className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-warm font-display text-sm font-bold text-primary-foreground"
+        className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-full bg-gradient-warm font-display text-sm font-bold text-primary-foreground"
       >
-        {iniciais}
+        {avatarUrl ? (
+          <img src={avatarUrl} alt={nome} className="h-full w-full object-cover" />
+        ) : (
+          iniciais
+        )}
       </button>
 
       {open && (

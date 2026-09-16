@@ -8,13 +8,13 @@ import DashboardLayout from "./pages/dashboard/DashboardLayout.jsx";
 import DashboardHome from "./pages/dashboard/DashboardHome.jsx";
 import Lotes from "./pages/confeccao/Lotes.jsx";
 import Parceiros from "./pages/confeccao/Parceiros.jsx";
-import Alertas from "./pages/dashboard/Alertas.jsx";
 import Equipe from "./pages/dashboard/Equipe.jsx";
 import Financeiro from "./pages/dashboard/Financeiro.jsx";
 import Perfil from "./pages/dashboard/Perfil.jsx";
 import Pedidos from "./pages/dashboard/Pedidos.jsx";
 import Materiais from "./pages/dashboard/Materiais.jsx";
 import Relatorios from "./pages/dashboard/Relatorios.jsx";
+import ProLayout from "./pages/pro/ProLayout.jsx";
 import ErrorBoundary from "./components/ErrorBoundary.jsx";
 
 import Toaster from "./components/ui/Toaster.jsx";
@@ -39,9 +39,10 @@ const App = () => (
             <Route path="materiais" element={<Materiais />} />
             <Route path="financeiro" element={<Financeiro />} />
             <Route path="relatorios" element={<Relatorios />} />
-            <Route path="alertas" element={<Alertas />} />
             <Route path="perfil" element={<Perfil />} />
           </Route>
+
+          <Route path="/pro" element={<ProLayout />} />
 
           <Route path="*" element={<NotFound />} />
         </Routes>

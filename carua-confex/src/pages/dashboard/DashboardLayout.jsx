@@ -16,7 +16,6 @@ const ITEMS = [
   { to: "/confeccao/materiais", label: "Materiais", icon: Boxes },
   { to: "/confeccao/financeiro", label: "Financeiro", icon: Wallet },
   { to: "/confeccao/relatorios", label: "Relatórios", icon: BarChart3 },
-  { to: "/confeccao/alertas", label: "Alertas e gargalos", icon: Bell },
 ];
 
 const AppSidebar = ({ collapsed, mobileOpen, onNavigate }) => {
